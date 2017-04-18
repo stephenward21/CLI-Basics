@@ -1,0 +1,30 @@
+Basic command line git
+Commands:
+
+FIRST NOTE: the $ simply indicates it is a bash prompt. Do NOT include it or the terminal will error.
+
+$ git init
+
+This command will create a git repository. You will get a notice: "Initialized empty Git repository in ..." This created a .git folder if the current directory. You can see the directory by typing: $ ls -la. Zshell will also show you are on "master" branch in paranthesis.
+
+Now that you have created a git repository, you need to add something to it. To add all files to it, simply do:
+
+$ git add *
+
+This command will grab all files (in programming a * usually means "Everything") and gets them packaged up to send to your remote (github).
+
+Now you can commit the files which will create a new point frozen in time. It is important to add a message so you/others can see information about the commit. Adding "-m" is for message.
+
+$ git commit -m "Initial commit"
+
+Now that you have a commit (frozen point in time), you need to push it up to your remote (github). The FIRST time you do this, you need to tell git where the remote is, in our case, github, before you can push it.
+
+$ git remote add origin https://github.com/YOURUSERNAME/YOURREPONME.GIT
+
+Once this is done, you can actually push it up to that location.
+
+$ git push -u origin master
+
+This line sends all the changes you've made on your local repo (you did "git add" and "git commit") and sends them up to the link above which will, from now on, be known as "origin." 
+
+the command "cat" concatenates files and prints on the standard output
